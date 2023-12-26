@@ -8,7 +8,7 @@ Most structured text consists of headings and paragraphs, whether you are readin
 
 Structured content makes the reading experience easier and more enjoyable.
 
-In HTML, each paragraph has to be wrapped in a <p> element, like so:
+In HTML, each paragraph has to be wrapped in a `<p>` element, like so:
 
 ```HTML
 <p>I am a paragraph, oh yes I am.</p>
@@ -20,11 +20,11 @@ Each heading has to be wrapped in a heading element:
 <h1>I am the title of the story.</h1>
 ```
 
-There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document; <h1> represents the main heading, <h2> represents subheadings, <h3> represents sub-subheadings, and so on.
+There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document; `<h1>` represents the main heading, `<h2>` represents subheadings, `<h3>` represents sub-subheadings, and so on.
 
 ### Implementing structural hierarchy
 
-For example, in this story, the <h1> element represents the title of the story, the <h2> elements represent the title of each chapter, and the <h3> elements represent sub-sections of each chapter:
+For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent sub-sections of each chapter:
 
 ```HTML
 <h1>The Crushing Bore</h1>
@@ -51,8 +51,8 @@ For example, in this story, the <h1> element represents the title of the story, 
 
 It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:
 
-- Preferably, you should use a single <h1> per page—this is the top level heading, and all others sit below this in the hierarchy.
-- Make sure you use the headings in the correct order in the hierarchy. Don't use <h3> elements to represent subheadings, followed by <h2> elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.
+- Preferably, you should use a single `<h1>` per page—this is the top level heading, and all others sit below this in the hierarchy.
+- Make sure you use the headings in the correct order in the hierarchy. Don't use `<h3>` elements to represent subheadings, followed by `<h2>` elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.
 - Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (for example, a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.
 
 ### Why do we need structure?
@@ -96,7 +96,7 @@ On the other hand, you could make any element look like a top level heading. Con
 </span>
 ```
 
-This is a <span> element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning.
+This is a `<span>` element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning.
 
 We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.
 
@@ -115,7 +115,7 @@ bread
 hummus
 ```
 
-Every unordered list starts off with a <ul> element—this wraps around all the list items:
+Every unordered list starts off with a `<ul>` element—this wraps around all the list items:
 
 ```HTML
 <ul>
@@ -127,7 +127,7 @@ Every unordered list starts off with a <ul> element—this wraps around all the 
 
 ```
 
-The last step is to wrap each list item in a <li> (list item) element:
+The last step is to wrap each list item in a `<li>` (list item) element:
 
 ```HTML
 <ul>
@@ -150,7 +150,7 @@ Turn left at the third roundabout
 The school is on your right, 300 meters up the road
 ```
 
-The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <ol> element, rather than <ul>:
+The markup structure is the same as for unordered lists, except that you have to wrap the list items in an `<ol>` element, rather than `<ul>`:
 
 ```HTML
 
@@ -212,7 +212,7 @@ I am glad you weren't late.
 
 The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one, with both the words "glad" and "late" in italics, sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.
 
-**In HTML we use the <em> (emphasis) element to mark up such instances.**
+**In HTML we use the `<em>` (emphasis) element to mark up such instances.**
 
 ```HTML
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -226,7 +226,7 @@ To emphasize important words, we tend to stress them in spoken language and bold
 This liquid is **highly toxic**.
 I am counting on you. **Do not be late!**
 
-In HTML we use the <strong> (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers, which can be configured to speak them in a different tone of voice.
+In HTML we use the `<strong>` (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers, which can be configured to speak them in a different tone of voice.
 
 ```HTML
 <p>This liquid is <strong>highly toxic</strong>.</p>
@@ -242,17 +242,17 @@ You can nest strong and emphasis inside one another if desired:
 
 ### Italic, bold, underline…
 
-The elements we've discussed so far have clearcut associated semantics. The situation with <b>, <i>, and <u> is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all.
+The elements we've discussed so far have clearcut associated semantics. The situation with `<b>`, `<i>`, and `<u>` is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all.
 
-HTML5 redefined <b>, <i>, and <u> with new, somewhat confusing, semantic roles.
+HTML5 redefined `<b>`,`<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 
-Here's the best rule you can remember: It's only appropriate to use <b>, <i>, or <u> to convey a meaning traditionally conveyed with bold, italics, or underline when there isn't a more suitable element; and there usually is. Consider whether <strong>, <em>, <mark>, or <span> might be more appropriate.
+Here's the best rule you can remember: It's only appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline when there isn't a more suitable element; and there usually is. Consider whether `<strong>`, `<em>`, `<mark>`, or `<span>` might be more appropriate.
 
 Always keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
 
-- <i> is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought…
-- <b> is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…
-- <u> is used to convey a meaning traditionally conveyed by underline: proper name, misspelling…
+- `<i>` is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought…
+- `<b>` is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…
+- `<u>` is used to convey a meaning traditionally conveyed by underline: proper name, misspelling…
 
 ```HTML
 <!-- scientific names -->
